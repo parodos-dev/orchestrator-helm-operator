@@ -7,7 +7,7 @@ sonataFlowOperator:
     channel: alpha # channel of an operator package to subscribe to
     name: logic-operator-rhel8 # name of the operator package
     sourceName: sonataflow-brew # name of the catalog source
-    startingCSV: logic-operator-rhel8.v1.33.0 # The initial version of the operator
+    startingCSV: logic-operator-rhel8.v1.34.0 # The initial version of the operator
 
 rhdhOperator:
   isReleaseCandidate: false # Indicates RC builds should be used by the chart to install RHDH
@@ -17,14 +17,15 @@ rhdhOperator:
     channel: fast # channel of an operator package to subscribe to
     name: rhdh # name of the operator package
     source: rhdh-brew # name of the catalog source
-    startingCSV: rhdh-operator.v1.2.0 # The initial version of the operator
+    startingCSV: rhdh-operator.v1.3.0 # The initial version of the operator
 
 sonataflow:
   images:
-    4.13: brew.registry.redhat.io/rh-osbs/iib:747442
-    4.14: brew.registry.redhat.io/rh-osbs/iib:747447
-    4.15: brew.registry.redhat.io/rh-osbs/iib:747453
-    4.16: brew.registry.redhat.io/rh-osbs/iib:747466
+      4.13: brew.registry.redhat.io/rh-osbs/iib:826480
+      4.14: brew.registry.redhat.io/rh-osbs/iib:826493
+      4.15: brew.registry.redhat.io/rh-osbs/iib:826482
+      4.16: brew.registry.redhat.io/rh-osbs/iib:826483
+      4.17: brew.registry.redhat.io/rh-osbs/iib:826485
 
 rhdh:
   images:
