@@ -1,6 +1,6 @@
 # Prerequisites
 - RHDH instance deployed with IDP configured (github, gitlab,...)
-- For using the Orchestrator's [software templates](https://github.com/parodos-dev/workflow-software-templates/tree/v1.2.x), OpenShift Gitops (ArgoCD) and OpenShift Pipelines (Tekton) should be installed and configured in RHDH (to enhance the CI/CD plugins)
+- For using the Orchestrator's [software templates](https://github.com/parodos-dev/workflow-software-templates/tree/main), OpenShift Gitops (ArgoCD) and OpenShift Pipelines (Tekton) should be installed and configured in RHDH (to enhance the CI/CD plugins)
 - A secret in RHDH's namespace name `dynamic-plugins-npmrc` that points to the plugins npm registry (details will be provided below)
 
 # Installation steps
@@ -205,9 +205,9 @@ See more configuration options for the plugin [here](https://github.com/backstag
 ### Import Orchestrator's software templates
 To import the Orchestrator software templates into the catalog via the Backstage UI, follow the instructions outlined in this [document](https://backstage.io/docs/features/software-templates/adding-templates).
 Register new templates into the catalog from the
-- [Workflow resources (group and system)](https://github.com/parodos-dev/workflow-software-templates/blob/v1.2.x/entities/workflow-resources.yaml) (optional)
-- [Basic template](https://github.com/parodos-dev/workflow-software-templates/blob/v1.2.x/scaffolder-templates/basic-workflow/template.yaml)
-- [Complex template - workflow with custom Java code](https://github.com/parodos-dev/workflow-software-templates/blob/v1.2.x/scaffolder-templates/complex-assessment-workflow/template.yaml)
+- [Workflow resources (group and system)](https://github.com/parodos-dev/workflow-software-templates/blob/main/entities/workflow-resources.yaml) (optional)
+- [Basic template](https://github.com/parodos-dev/workflow-software-templates/blob/main/scaffolder-templates/basic-workflow/template.yaml)
+- [Complex template - workflow with custom Java code](https://github.com/parodos-dev/workflow-software-templates/blob/main/scaffolder-templates/complex-assessment-workflow/template.yaml)
 
 ## Upgrade plugin versions - WIP
 To perform an upgrade of the plugin versions, start by acquiring the new plugin version along with its associated integrity value.
