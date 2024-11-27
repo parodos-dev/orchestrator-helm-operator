@@ -325,7 +325,7 @@ data:
         - type: url
           target: https://github.com/parodos-dev/workflow-software-templates/blob/{{ .Values.rhdhOperator.catalogBranch }}/scaffolder-templates/basic-workflow/template.yaml
         - type: url
-          target: https://github.com/parodos-dev/workflow-software-templates/blob/{{ .Values.rhdhOperator.catalogBranch }}/scaffolder-templates/complex-assessment-workflow/template.yaml
+          target: https://github.com/parodos-dev/workflow-software-templates/blob/{{ .Values.rhdhOperator.catalogBranch }}/scaffolder-templates/advanced-workflow/template.yaml
 {{- end }}
 {{- $unmanagedNamespaceExists := include "unmanaged-resource-exists" (list "rhdh.redhat.com/v1alpha1" "Backstage" .Values.rhdhOperator.subscription.targetNamespace "backstage" .Release.Name .Capabilities.APIVersions ) }}
 {{- if eq $unmanagedNamespaceExists "false" }}

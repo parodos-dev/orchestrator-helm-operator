@@ -4,7 +4,7 @@ Welcome to the **Orchestrator Operator Documentation**. This folder contains sup
 
 ## Overview
 
-The **Orchestrator** project facilitates the automation of complex workflows across various systems.
+The **Orchestrator** project facilitates the automation of advanced workflows across various systems.
 
 - **gitops/**
   - Documentation for initializing the GitOps Environment
