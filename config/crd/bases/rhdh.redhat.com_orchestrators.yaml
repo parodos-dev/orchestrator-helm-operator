@@ -83,7 +83,7 @@ spec:
                         description: SourceName captures the name of the catalog source
                         type: string
                       startingCSV:
-                        default: "logic-operator-rhel8.v1.34.0"
+                        default: "logic-operator-rhel8.v1.35.0"
                         description: The initial version of the operator
                         type: string
                     type: object
@@ -136,8 +136,8 @@ spec:
                     description: EnableGuestProvider captures whether to enable the guest provider in RHDH. Defaults to false.
                     type: boolean
                   catalogBranch:
-                    default: "v1.3.x"
-                    description: CatalogBranch captures the catalog branch value. Defaults to "v1.3.x".
+                    default: "v1.4.x"
+                    description: CatalogBranch captures the catalog branch value. Defaults to "v1.4.x".
                     type: string
                   secretRef:
                     description: Backstage secret reference information
