@@ -1181,6 +1181,9 @@
         "orchestrator": {
             "namespace": "sonataflow-infra",
             "sonataflowPlatform": {
+                "monitoring": {
+                    "enabled": false
+                },
                 "resources": {
                     "requests": {
                         "memory": "64Mi",

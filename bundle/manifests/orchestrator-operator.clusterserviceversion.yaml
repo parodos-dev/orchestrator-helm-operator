@@ -21,6 +21,9 @@ metadata:
             "orchestrator": {
               "namespace": "sonataflow-infra",
               "sonataflowPlatform": {
+                "monitoring": {
+                  "enabled": true
+                },
                 "resources": {
                   "limits": {
                     "cpu": "500m",
