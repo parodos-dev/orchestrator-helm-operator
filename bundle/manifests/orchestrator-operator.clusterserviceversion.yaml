@@ -46,7 +46,6 @@ metadata:
             "rhdhOperator": {
               "enableGuestProvider": false,
               "enabled": true,
-              "isReleaseCandidate": false,
               "secretRef": {
                 "argocd": {
                   "password": "ARGOCD_PASSWORD",
@@ -112,7 +111,6 @@ metadata:
             },
             "sonataFlowOperator": {
               "enabled": true,
-              "isReleaseCandidate": false,
               "subscription": {
                 "channel": "alpha",
                 "installPlanApproval": "Automatic",
