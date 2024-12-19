@@ -107,7 +107,7 @@ metadata:
                 "installPlanApproval": "Automatic",
                 "name": "serverless-operator",
                 "namespace": "openshift-serverless",
-                "sourceName": "redhat-operators"
+                "source": "redhat-operators"
               }
             },
             "sonataFlowOperator": {
@@ -118,7 +118,7 @@ metadata:
                 "installPlanApproval": "Automatic",
                 "name": "logic-operator-rhel8",
                 "namespace": "openshift-serverless-logic",
-                "sourceName": "redhat-operators",
+                "source": "redhat-operators",
                 "startingCSV": "logic-operator-rhel8.v1.34.0"
               }
             },
@@ -131,7 +131,7 @@ metadata:
     capabilities: Basic Install
     categories: Developer Tools
     console.openshift.io/disable-operand-delete: "true"
-    createdAt: "2024-12-19T16:28:07Z"
+    createdAt: "2024-12-19T23:50:02Z"
     features.operators.openshift.io/cnf: "false"
     features.operators.openshift.io/cni: "false"
     features.operators.openshift.io/csi: "false"
@@ -161,10 +161,10 @@ spec:
   apiservicedefinitions: {}
   customresourcedefinitions:
     owned:
-    - description: RHDH Orchestrator introduces serverless asynchronous workflows to Backstage,
-        with a focus on facilitating the transition of applications to the cloud,
-        onboarding developers, and enabling users to create workflows for backstage
-        actions or external systems.
+    - description: RHDH Orchestrator introduces serverless asynchronous workflows
+        to Backstage, with a focus on facilitating the transition of applications
+        to the cloud, onboarding developers, and enabling users to create workflows
+        for backstage actions or external systems.
       displayName: Orchestrator
       kind: Orchestrator
       name: orchestrators.rhdh.redhat.com
