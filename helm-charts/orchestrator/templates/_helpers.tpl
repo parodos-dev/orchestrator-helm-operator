@@ -121,20 +121,3 @@
         {{- .argoCDNamespace -}}
     {{- end -}}
 {{- end -}}
-
-{{- define "get-cluster-version" -}}
-  {{- $v := "" }}
-  {{- $version :=(lookup "config.openshift.io/v1" "ClusterVersion" "" "version") }}
-  {{- range $version.status.history }}
-    {{- if eq .state "Completed" }}
-      {{- $v = (semver .version) }}
-    {{- end }}
-  {{- end }}
-
-  {{- $validMinors := list "4.13" "4.14" "4.15" "4.16" -}}
-  {{- $versionString := printf "%d.%d" $v.Major $v.Minor -}}
-  {{- if not (semverCompare ">=4.13 <=4.16" $versionString) -}}
-    {{- fail (printf "Unsupported OCP version: %s. Supported versions: %s." $versionString $validMinors) -}}
-  {{- end -}}
-  {{- $versionString -}}
-{{- end -}}
