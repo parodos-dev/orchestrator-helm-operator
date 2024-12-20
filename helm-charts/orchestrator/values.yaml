@@ -1,12 +1,11 @@
 sonataFlowOperator:
-  isReleaseCandidate: false # Indicates RC builds should be used by the chart to install Sonataflow
   enabled: true # whether the operator should be deployed by the chart
   subscription:
     namespace: openshift-serverless-logic # namespace where the operator should be deployed
     channel: alpha # channel of an operator package to subscribe to
     installPlanApproval: Automatic # whether the update should be installed automatically
     name: logic-operator-rhel8 # name of the operator package
-    sourceName: redhat-operators # name of the catalog source
+    source: redhat-operators # name of the catalog source
     startingCSV: logic-operator-rhel8.v1.34.0 # The initial version of the operator
 
 serverlessOperator:
@@ -16,10 +15,9 @@ serverlessOperator:
     channel: stable # channel of an operator package to subscribe to
     installPlanApproval: Automatic # whether the update should be installed automatically
     name: serverless-operator # name of the operator package
-    sourceName: redhat-operators # name of the catalog source
+    source: redhat-operators # name of the catalog source
 
 rhdhOperator:
-  isReleaseCandidate: false # Indicates RC builds should be used by the chart to install RHDH
   enabled: true # whether the operator should be deployed by the chart
   enableGuestProvider: false # whether to enable guest provider
   catalogBranch: v1.4.x # The branch for https://github.com/rhdhorchestrator/workflow-software-templates used to import software templates resources
@@ -42,7 +40,6 @@ rhdhOperator:
       hostname: NOTIFICATIONS_EMAIL_HOSTNAME # Key in the secret with name defined in the 'name' field that contains the value of the hostname of the SMTP server for the notifications plugin. Defaults to 'NOTIFICATIONS_EMAIL_HOSTNAME', empty for not available.
       username: NOTIFICATIONS_EMAIL_USERNAME # Key in the secret with name defined in the 'name' field that contains the value of the username of the SMTP server for the notifications plugin. Defaults to 'NOTIFICATIONS_EMAIL_USERNAME', empty for not available.
       password: NOTIFICATIONS_EMAIL_PASSWORD # Key in the secret with name defined in the 'name' field that contains the value of the password of the SMTP server for the notifications plugin. Defaults to 'NOTIFICATIONS_EMAIL_PASSWORD', empty for not available.
-
   subscription:
     namespace: rhdh-operator # namespace where the operator should be deployed
     channel: fast-1.4 # channel of an operator package to subscribe to
