@@ -365,14 +365,6 @@ spec:
                                 default: 64Mi
                                 type: string
                             type: object
-                      dataIndexImage:
-                        description: This field contains the location of a custom DataIndex service container image to be used instead of the provided one by SonataFlow
-                        default:
-                        type: string
-                      jobServiceImage:
-                        description: This field contains the location of a custom Job Service container image to be used instead of the provided one by SonataFlow
-                        default:
-                        type: string
                     type: object
                 type: object
               tekton:
