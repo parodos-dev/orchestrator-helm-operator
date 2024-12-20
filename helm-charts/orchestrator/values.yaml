@@ -40,7 +40,6 @@ rhdhOperator:
       hostname: NOTIFICATIONS_EMAIL_HOSTNAME # Key in the secret with name defined in the 'name' field that contains the value of the hostname of the SMTP server for the notifications plugin. Defaults to 'NOTIFICATIONS_EMAIL_HOSTNAME', empty for not available.
       username: NOTIFICATIONS_EMAIL_USERNAME # Key in the secret with name defined in the 'name' field that contains the value of the username of the SMTP server for the notifications plugin. Defaults to 'NOTIFICATIONS_EMAIL_USERNAME', empty for not available.
       password: NOTIFICATIONS_EMAIL_PASSWORD # Key in the secret with name defined in the 'name' field that contains the value of the password of the SMTP server for the notifications plugin. Defaults to 'NOTIFICATIONS_EMAIL_PASSWORD', empty for not available.
-
   subscription:
     namespace: rhdh-operator # namespace where the operator should be deployed
     channel: fast-1.4 # channel of an operator package to subscribe to

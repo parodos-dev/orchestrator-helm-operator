@@ -212,6 +212,7 @@
             "title": "The rhdhOperator Schema",
             "required": [
                 "enabled",
+                "targetNamespace",
                 "enableGuestProvider",
                 "catalogBranch",
                 "secretRef",
@@ -224,6 +225,14 @@
                     "title": "The enabled Schema",
                     "examples": [
                         true
+                    ]
+                },
+                "targetNamespace": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The targetNamespace Schema",
+                    "examples": [
+                        "rhdh-operator"
                     ]
                 },
                 "enableGuestProvider": {
@@ -475,8 +484,7 @@
                         "installPlanApproval",
                         "name",
                         "source",
-                        "startingCSV",
-                        "targetNamespace"
+                        "startingCSV"
                     ],
                     "properties": {
                         "namespace": {
@@ -526,14 +534,6 @@
                             "examples": [
                                 ""
                             ]
-                        },
-                        "targetNamespace": {
-                            "type": "string",
-                            "default": "",
-                            "title": "The targetNamespace Schema",
-                            "examples": [
-                                "rhdh-operator"
-                            ]
                         }
                     },
                     "examples": [{
@@ -542,13 +542,13 @@
                         "installPlanApproval": "Automatic",
                         "name": "rhdh",
                         "source": "redhat-operators",
-                        "startingCSV": "",
-                        "targetNamespace": "rhdh-operator"
+                        "startingCSV": ""
                     }]
                 }
             },
             "examples": [{
                 "enabled": true,
+                "targetNamespace": "rhdh-operator",
                 "enableGuestProvider": false,
                 "catalogBranch": "v1.4.x",
                 "secretRef": {
@@ -582,8 +582,7 @@
                     "installPlanApproval": "Automatic",
                     "name": "rhdh",
                     "source": "redhat-operators",
-                    "startingCSV": "",
-                    "targetNamespace": "rhdh-operator"
+                    "startingCSV": ""
                 }
             }]
         },
@@ -1091,6 +1090,7 @@
         },
         "rhdhOperator": {
             "enabled": true,
+            "targetNamespace": "rhdh-operator",
             "enableGuestProvider": false,
             "catalogBranch": "v1.4.x",
             "secretRef": {
@@ -1124,8 +1124,7 @@
                 "installPlanApproval": "Automatic",
                 "name": "rhdh",
                 "source": "redhat-operators",
-                "startingCSV": "",
-                "targetNamespace": "rhdh-operator"
+                "startingCSV": ""
             }
         },
         "rhdhPlugins": {
